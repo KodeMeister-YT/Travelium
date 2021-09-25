@@ -1,0 +1,179 @@
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers:
+ * http://juicystudio.com/article/screen-readers-display-none.php
+ */
+
+.hidden {
+  display: none !important;
+  visibility: hidden;
+}
+
+/*
+* Hide only visually, but have it available for screen readers:
+* http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+*/
+
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+/*
+* Extends the .visuallyhidden class to allow the element
+* to be focusable when navigated to via the keyboard:
+* https://www.drupal.org/node/897638
+*/
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+}
+
+/*
+* Hide visually and from screen readers, but maintain layout
+*/
+
+.invisible {
+  visibility: hidden;
+  opacity: 0;
+}
+
+/*
+* Clearfix: contain floats
+*
+* For modern browsers
+* 1. The space content is one way to avoid an Opera bug when the
+*    `contenteditable` attribute is included anywhere else in the document.
+*    Otherwise it causes space to appear at the top and bottom of elements
+*    that receive the `clearfix` class.
+* 2. The use of `table` rather than `block` is only necessary if using
+*    `:before` to contain the top-margins of child elements.
+*/
+
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+// Center flex
+.flex-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+/*Center elements*/
+.center,
+.center-left,
+.center-right,
+.center-bottom,
+.center-top {
+  position: absolute;
+  margin: auto;
+}
+
+.center,
+.center-left,
+.center-right {
+  top: 0;
+  bottom: 0;
+}
+
+.center-left {
+  left: 0;
+}
+
+.center-right {
+  right: 0;
+}
+
+.center,
+.center-top,
+.center-bottom {
+  left: 0;
+  right: 0;
+}
+
+.center-bottom {
+  bottom: 0;
+}
+
+.center-top {
+  top: 0;
+}
+
+/*Columns & Rows*/
+.cols-2 {
+  position: relative;
+
+  .col {
+    position: relative;
+    width: 50%;
+    float: left;
+  }
+}
+
+.rows-2 {
+  position: relative;
+
+  .row {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 50%;
+  }
+}
+
+.row {
+
+  &.active,
+  &:hover {
+
+    p.subtitle {
+      i {
+        opacity: 1;
+        @include transform(translateX(0px));
+
+        @for $i from 1 through 13 {
+          &:nth-child(#{$i}) {
+            @include transition-delay(#{0.4 + ($i/10)}s);
+          }
+        }
+      }
+    }
+  }
+}
+
+.circle {
+  border-radius: 50%;
+}
+
+
+.full {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}

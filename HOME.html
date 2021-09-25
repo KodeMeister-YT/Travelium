@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="icon" href="images/logo.png" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Travelium</title>
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="/FA1--HTML/fade-in.css" />
+    <link rel="stylesheet" href="https://unpkg.com/kursor/dist/kursor.css" />
+
+    <link rel="prefetch" href="INDEX.html" />
+  </head>
+
+  <!-- get browser -->
+  <script>
+    console.log(getBrowserInfo());
+    function getBrowserInfo() {
+      let ua = navigator.userAgent.toLowerCase();
+
+      if (ua.search("opr") > -1) {
+        window.location.replace("INDEX.html");
+      } else if (ua.search("edg") > -1) {
+        window.location.replace("INDEX.html");
+      } else if (
+        ua.search("chrome") > -1 ||
+        ua.search("crios") > -1 ||
+        !!window.chrome == true
+      ) {
+        window.location.replace("INDEX.html");
+      } else if (
+        ua.search("firefox") > -1 ||
+        ua.search("fxios") > -1 ||
+        ua.search("focus") > -1
+      ) {
+        window.location.replace("INDEX.html");
+      }
+    }
+  </script>
+  <script src="null.js"></script>
+  <script src="null.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/kursor@0.0.14/dist/kursor.js"></script>
+  <script>
+    new kursor({
+      type: 1,
+      removeDefaultCursor: true,
+      color: "#fe019a",
+    });
+  </script>
+  <style>
+    ::-moz-selection {
+      /* Code for Firefox */
+      color: black;
+      background: #b3d4fc;
+    }
+
+    ::selection {
+      color: black;
+      background: #b3d4fc;
+    }
+  </style>
+  <script src="javascript/offline.js"></script>
+</html>

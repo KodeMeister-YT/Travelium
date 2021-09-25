@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="images/logo.png" />
+    <title>OFFLINE ERROR | TRAVELIUM</title>
+
+    <style>
+      @import url(//fonts.googleapis.com/icon?family=Material+Icons);
+      body {
+        padding-top: 23px;
+        padding: 132px;
+        text-align: center;
+        font-family: "Gilroy-Medium";
+        color: white;
+        background: #221a24;
+        font-family: sans-serif !important;
+        font-size: larger !important;
+      }
+
+      #headingone {
+        font-family: Gilroy-Heavy;
+        font-size: 34px;
+      }
+      .material-icons {
+        text-align: center;
+        font-family: "Material Icons";
+        font-weight: normal;
+        font-style: normal;
+        font-size: 170px;
+        display: inline-block;
+        flex-direction: row;
+      }
+    </style>
+
+    <script>
+      window.console = window.console || function (t) {};
+    </script>
+
+    <script>
+      if (document.location.search.match(/type=embed/gi)) {
+        window.parent.postMessage("resize", "*");
+      }
+    </script>
+  </head>
+
+  <body translate="no">
+    <i><img src="images/offline.png" alt="" /></i>
+    <div id="headingone">Your Connection was Offline.</div>
+    <br />
+    This website requires an active internet connection make sure that you are
+    online and then try again later...
+  </body>
+</html>

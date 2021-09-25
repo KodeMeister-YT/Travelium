@@ -1,0 +1,272 @@
+@font-face {
+  font-family: sf-pdl;
+  src: url(SF-Pro-Display-Light.otf);
+}
+
+@font-face {
+  font-family: ny-elb;
+  src: url(NewYorkExtraLargeBold.otf);
+}
+
+body {
+  background-color: #333;
+}
+
+.red {
+  color: red;
+}
+
+.Green {
+  color: rgb(2, 204, 2);
+  cursor: help;
+}
+
+h2 {
+  color: rgb(145, 145, 145);
+  font-family: ny-elb;
+}
+
+
+.mapdiv {
+  width: 38%;
+  margin: auto;
+}
+
+.mapdiv path {
+  fill: #ccc;
+  stroke: #333c;
+  stroke-width: 4px;
+  transition: fill 0.3s;
+}
+
+#combined :nth-child(1) :hover {
+  fill: red;
+}
+
+/*  Andaman and Nicobar */
+
+#combined :nth-child(2) :hover {
+  fill: red;
+}
+
+/* Telangana  */
+
+#combined :nth-child(3) :hover {
+  fill: red;
+}
+
+/* Andhra Pradesh  */
+
+#combined :nth-child(4) :hover {
+  fill: red;
+}
+
+/*  Arunachal Pradesh */
+
+#combined :nth-child(5) :hover {
+  fill: red;
+}
+
+/* Assam  */
+
+#combined :nth-child(6) :hover {
+  fill: red;
+}
+
+/* Bihar  */
+
+#combined :nth-child(7) :hover {
+  fill: red;
+}
+
+/* Chandigarh  */
+
+#combined :nth-child(8) :hover {
+  fill: red;
+}
+
+/*  Chhattisgarh */
+
+#combined :nth-child(9) :hover {
+  fill: red;
+}
+
+/* Dadra and Nagar Haveli  */
+
+#combined :nth-child(10) :hover {
+  fill: red;
+}
+
+/* Daman and Diu  */
+
+#combined :nth-child(11) :hover {
+  fill: red;
+}
+
+/*  Delhi */
+
+#combined :nth-child(12) :hover {
+  fill: red
+}
+
+/* Goa  */
+
+#combined :nth-child(13) :hover {
+  fill: rgb(2, 204, 2);
+}
+
+/*  Gujarat */
+
+#combined :nth-child(14) :hover {
+  fill: red;
+}
+
+/* Haryana  */
+
+#combined :nth-child(15) :hover {
+  fill: red;
+}
+
+/* Himachal Pradesh  */
+
+#combined :nth-child(16) :hover {
+  fill: red;
+}
+
+/*  Jharkhand */
+
+#combined :nth-child(17) :hover {
+  fill: red;
+}
+
+/* Karnataka  */
+
+#combined :nth-child(18) :hover {
+  fill: red;
+}
+
+/*  Kerala */
+
+#combined :nth-child(19) :hover {
+  fill: red;
+}
+
+/*  Madhya Pradesh */
+
+#combined :nth-child(20) :hover {
+  fill: rgb(2, 204, 2);
+}
+
+/*  Maharashtra */
+
+#combined :nth-child(21) :hover {
+  fill: red;
+}
+
+/* Manipur  */
+
+#combined :nth-child(22) :hover {
+  fill: red;
+}
+
+/* Meghalaya  */
+
+#combined :nth-child(23) :hover {
+  fill: red;
+}
+
+/*  Mizoram */
+
+#combined :nth-child(24) :hover {
+  fill: red;
+}
+
+/*  Nagaland */
+
+#combined :nth-child(25) :hover {
+  fill: red;
+}
+
+/* Orissa  */
+
+#combined :nth-child(26) :hover {
+  fill: red;
+}
+
+/* Puducherry  */
+
+#combined :nth-child(27) :hover {
+  fill: red;
+}
+
+/* Punjab  */
+
+#combined :nth-child(28) :hover {
+  fill: rgb(2, 204, 2);
+}
+
+/*  Rajasthan */
+
+#combined :nth-child(29) :hover {
+  fill: red;
+}
+
+/*  Sikkim */
+
+#combined :nth-child(30) :hover {
+  fill: red;
+}
+
+/* Tamil Nadu  */
+
+#combined :nth-child(31) :hover {
+  fill: red;
+}
+
+/*  Tripura */
+
+#combined :nth-child(32) :hover {
+  fill: red;
+}
+
+/* Uttar Pradesh  */
+
+#combined :nth-child(33) :hover {
+  fill: red;
+}
+
+/* Uttaranchal  */
+
+#combined :nth-child(34) :hover {
+  fill: red;
+}
+
+/* West Bengal  */
+
+#combined :nth-child(35) :hover {
+  fill: red;
+}
+
+/*  Lakshadweep */
+
+#combined :nth-child(36) :hover {
+  fill: red
+}
+
+/* J&K  */
+
+#combined :nth-child(37) :hover {
+  fill: red;
+}
+
+/*  Ladakh */
+
+#combined :nth-child(38) :hover {
+  fill: red;
+}
+
+.green {
+  cursor: help;
+}
+
+/*   */

@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="prefetch href="index-supported.html>
+    <link rel="stylesheet" href="https://unpkg.com/kursor/dist/kursor.css" />
+
+    <link
+      rel="preload"
+      as="video"
+      type="videp.mp4"
+      href="Videos/FINAL CHECK.mp4"
+    />
+    <link rel="stylesheet" href="/FA1--HTML/fade-in.css">
+    <title>Document</title>
+  </head>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+    }
+    body {
+      background-color: white;
+    }
+
+    .title,
+    .subtitle {
+      text-align: center;
+    }
+    .title {
+      padding: 10px 60px;
+      letter-spacing: 2px;
+      font-size: 50px;
+    }
+    .subtitle {
+      font-size: 20px;
+    }
+    .block {
+      padding: 0 100px;
+    }
+    .browser-flex {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      /* background-color: #fcf3d9; */
+    }
+    a {
+      text-decoration: none;
+      color: black;
+      font-size: 20px;
+    }
+    .link:hover {
+      /* background-color: #b8f8b3; */
+      background-color: #a6f7a0;
+    }
+    .link {
+      padding: 15px;
+      border-radius: 20px;
+    }
+    [data-tooltip] {
+      position: relative;
+      z-index: 2;
+      cursor: pointer;
+    }
+
+    /* Hide the tooltip content by default */
+    [data-tooltip]:before,
+    [data-tooltip]:after {
+      visibility: hidden;
+      -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+      filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=0);
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    /* Position tooltip above the element */
+    [data-tooltip]:before {
+      position: absolute;
+      bottom: 750%;
+      left: 50%;
+      margin-bottom: 5px;
+      margin-left: -80px;
+      padding: 7px;
+      width: 160px;
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      border-radius: 3px;
+      background-color: #000;
+      background-color: hsla(0, 0%, 20%, 0.9);
+      color: #fff;
+      content: attr(data-tooltip);
+      text-align: center;
+      font-size: 14px;
+      line-height: 1.2;
+    }
+
+    /* Triangle hack to make tooltip look like a speech bubble */
+    [data-tooltip]:after {
+      position: absolute;
+      bottom: 750%;
+      left: 50%;
+      margin-left: -5px;
+      width: 0;
+      border-top: 5px solid #000;
+      border-top: 5px solid hsla(0, 0%, 20%, 0.9);
+      border-right: 5px solid transparent;
+      border-left: 5px solid transparent;
+      content: " ";
+      font-size: 0;
+      line-height: 0;
+    }
+
+    /* Show tooltip content on hover */
+    [data-tooltip]:hover:before,
+    [data-tooltip]:hover:after {
+      visibility: visible;
+      -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+      filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=100);
+      opacity: 1;
+    }
+    .browser--link{
+      background-color: tomato;
+      color: white;
+      border-radius: 10px;
+      padding: 10px;
+      margin-bottom: 5px;
+    }
+    .browser--link--empty{
+      cursor: not-allowed;
+    }
+    .container{
+      font-weight: 300;
+      border-radius: 20px !important;
+    }
+    img{
+      padding: 20px !important;
+    }
+    .container a {
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  margin: auto;
+  width: 180px;
+  display: inline-block;
+  line-height: 40px;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  background-color: #E95635;
+  box-shadow: 0px 15px 18px -6px rgba(233, 86, 53, 0.5);
+  transition: all 0.4s;
+  position: relative;
+  cursor: pointer;
+  padding: 1px 20px;
+}
+body .container a:hover {
+  background-color: rgb(163, 59, 36) ;
+  box-shadow: 0px 22px 19px -8px rgba(219, 255, 16, 0.5);
+  transform: scale(1.02, 1.02);
+}
+body .container a:active {
+  transition: all 0.4s -0.125s;
+  color: black;
+  background-color: yellow;
+  box-shadow: 0px 12px 18px -4px rgba(219, 255, 16, 0.9);
+  transform: scale(0.95, 0.95);
+}
+.container-disabled{
+  cursor: not-allowed;
+}
+.container-disabled a {
+  cursor: not-allowed;
+}
+  </style>
+
+  <body>
+    <div class="head">
+      <center>
+        
+        <div><p class="title">FIREFOX is not supported</p></div>
+      <h2 style="margin-top:20px;"><p class="">Use these browsers instead</p></h2>
+      <br>
+      <br>
+      <br>
+    </center>
+
+      <div>
+        <p class="subtitle">
+          You are using a browser that we dont support <br>
+          Enhance your user experience by using on of these browsers mentioned below
+          <br />
+          
+        </p>
+      </div>
+    </div>
+    <br />
+    <br />
+    <br />
+
+    <div class="browser">
+      <h2
+        style="
+          text-align: center;
+          font-size: 25px;
+          font-weight: 600;
+          letter-spacing: 15px;
+        "
+      >
+        RECOMMENDED BROWSERS
+      </h2>
+      <br />
+      <br />
+
+      <div class="browser-flex">
+        <div class="brave block">
+          <p>
+            <div class="link">
+              <div class="chrome">
+                <center>
+                <img
+                src="images/brave-logo.png"
+                width="100px"
+                
+                alt=""
+                />
+              </center>
+              <div class="container"><a href="https://brave.com/" target="blank">Download Brave</a></div>
+              <br>
+              
+                <!-- <a href="https://brave.com/">
+                  <p style="text-align: center" class="browser--link">Download Brave</p>
+                  <p style="text-align: center" class="browser--link browser--link--empty">Open in Brave</p>
+                </a> -->
+                </div>
+              </div>
+          </p>
+        </div>
+      <div class="browser-flex">
+        <div class="brave block">
+          <p>
+            <div class="link">
+              <div class="chrome">
+                <center>
+                <img
+                src="images/edge.png"
+                width="100px"
+                
+                alt=""
+                />
+              </center>
+              <div class="container"><a href="https://www.microsoft.com/en-us/edge" target="blank">Download Edge</a></div>
+              <br>
+             
+                <!-- <a href="https://brave.com/">
+                  <p style="text-align: center" class="browser--link">Download Brave</p>
+                  <p style="text-align: center" class="browser--link browser--link--empty">Open in Brave</p>
+                </a> -->
+                </div>
+              </div>
+          </p>
+        </div>
+<!-- 
+        <div class="browser-flex">
+          <div class="brave block">
+            <p>
+              <div class="link">
+                <div class="chrome">
+                  <center>
+                  <img
+                  src="/FA1--HTML/images/edge.png"
+                  width="100px"
+                  
+                  alt=""
+                  />
+                </center>
+                  <a href="https://www.microsoft.com/en-us/edge">
+                    <p style="text-align: center" class="browser--link">Download Edge</p>
+                  </a>
+                  <a href="microsoft-edge:/FA1--HTML/index-supported.html">
+                    <p style="text-align: center" class="browser--link">Open in Edge</p>
+                  </a>
+                  </div>
+                </div>
+            </p>
+          </div> -->
+        
+        <!-- <p><a href="#" data-tooltip="I’m the tooltip text."> -->
+      </div>
+    </div>
+    <center>
+      <script src="null.js"></script>
+      <script src="null.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/kursor@0.0.14/dist/kursor.js"></script>
+    <script>
+      new kursor({
+        type: 1,
+        removeDefaultCursor: true,
+color: '#fe019a',
+
+      });
+    </script>
+     <style>
+      ::-moz-selection { /* Code for Firefox */
+  color: black;
+  background: #B3D4FC;
+}
+
+::selection {
+  color: black;
+  background: #B3D4FC;
+}
+    </style>
+   <script src="javascript/offline.js"></script>
+  </body>
+</html>

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="icon" href="images/logo.png" />
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="https://unpkg.com/kursor/dist/kursor.css" />
+
+    <title>Log out</title>
+    <link rel="stylesheet" href="fade-in.css" />
+    <style>
+      @import url("https://fonts.googleapis.com/css?family=Do+Hyeon");
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        outline: none;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        user-select: none;
+        animation: fade 0.5s;
+      }
+
+      @keyframes fade {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      body {
+        animation: fade 1s;
+        overflow: hidden;
+        font-family: "Do Hyeon", sans-serif;
+        color: #fff;
+      }
+
+      img.bg {
+        height: 100%;
+        transform: scale(1.1);
+        filter: blur(20px);
+        z-index: -1;
+      }
+
+      .login {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+        text-align: center;
+        max-width: 170px;
+      }
+
+      .login-password {
+        height: 245px;
+      }
+
+      .login img.user-img {
+        width: 128px;
+        border-radius: 50%;
+        animation: fade 0.5s;
+      }
+
+      .login p {
+        color: #fff;
+        font-size: 22px;
+        text-align: center;
+        margin-top: 15px;
+      }
+
+      .login input {
+        margin-top: 25px;
+        border: none;
+        background: rgba(255, 255, 255, 0.3);
+        color: rgba(255, 255, 255, 0.8);
+        font-family: "Do Hyeon", sans-serif;
+        width: 170px;
+        padding: 10px;
+        border-radius: 4px;
+      }
+      ::placeholder {
+        /* Chrome, Firefox, Opera, Safari 10.1+ */
+        color: #333;
+        opacity: 1; /* Firefox */
+      }
+
+      :-ms-input-placeholder {
+        /* Internet Explorer 10-11 */
+        color: #333;
+      }
+
+      ::-ms-input-placeholder {
+        /* Microsoft Edge */
+        color: #333;
+      }
+    </style>
+
+    <script>
+      window.console = window.console || function (t) {};
+    </script>
+
+    <script>
+      if (document.location.search.match(/type=embed/gi)) {
+        window.parent.postMessage("resize", "*");
+      }
+    </script>
+  </head>
+
+  <body translate="no">
+    <!-- <img class="bg" src="https://screenshots.macupdate.com/JPG/48313/48313_scr_uc1.jpg"> -->
+    <img
+      class="bg"
+      src="https://www.dailydot.com/wp-content/uploads/784/98/ddcd28e162d1c523528e2b7c7d5559ee.jpg"
+    />
+
+    <div class="login" id="login">
+      <input
+        autocomplete="off"
+        type="text"
+        placeholder="Enter Username"
+        id="username"
+      />
+      <!--   <img style="display: none; width: 30px; filter: blur(1px); margin-top: 15px;" src="https://www.easypdfcloud.com/Images/loading-256-0001.gif" id="loading-user"> -->
+    </div>
+
+    <div class="login login-password" id="login-password" style="display: none">
+      <img src="images/logo.png" class="user-img" />
+      <p class="name" id="name"></p>
+      <input
+        autocomplete="off"
+        type="password"
+        placeholder="Enter Password"
+        id="password"
+      />
+      <img
+        style="display: none; width: 30px; filter: blur(1px); margin-top: 25px"
+        src="https://www.easypdfcloud.com/Images/loading-256-0001.gif"
+        id="loading-pass"
+      />
+      <h1 id="welcome"></h1>
+    </div>
+
+    <script id="rendered-js">
+      var input = document.getElementById("username");
+      input.focus();
+      input.addEventListener("keyup", function (event) {
+        event.preventDefault();
+        if (event.keyCode === 13) {
+          input.style.display = "none";
+          // document.getElementById('loading-user').style.display = "block";
+          setTimeout(function () {
+            // document.getElementById('loading-user').style.display = "none";
+            document.getElementById("login").style.display = "none";
+            document.getElementById("login-password").style.display = "block";
+            input.style.display = "block";
+            input.focus();
+          }, 500);
+        }
+      });
+
+      var input = document.getElementById("password");
+      input.addEventListener("keyup", function (event) {
+        event.preventDefault();
+        if (event.keyCode === 13) {
+          input.style.display = "none";
+          document.getElementById("loading-pass").style.display =
+            "inline-block";
+          setTimeout(function () {
+            document.getElementById("loading-pass").style.display = "none";
+            document.getElementById("welcome").innerHTML = "LoggedOut";
+          }, 600);
+          window.setTimeout(function () {
+            // Move to a new location or you can do something else
+            window.location.href = "index-new-loader.html";
+          }, 2000);
+          // window.location.replace(".html");
+        }
+      });
+      //# sourceURL=pen.js
+    </script>
+    <script src="null.js"></script>
+    <script src="null.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/kursor@0.0.14/dist/kursor.js"></script>
+    <script>
+      new kursor({
+        type: 1,
+        removeDefaultCursor: true,
+        color: "#fe019a",
+      });
+    </script>
+    <style>
+      ::-moz-selection {
+        /* Code for Firefox */
+        color: black;
+        background: #b3d4fc;
+      }
+
+      ::selection {
+        color: black;
+        background: #b3d4fc;
+      }
+    </style>
+    <script src="javascript/offline.js"></script>
+  </body>
+</html>

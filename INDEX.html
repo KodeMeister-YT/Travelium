@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="images/logo.png" sizes="40x40" />
+    <title>Start? | TRAVELIUM</title>
+    <link rel="stylesheet" href="https://unpkg.com/kursor/dist/kursor.css" />
+    <link rel="prefetch" href="bird-loader.html" />
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap");
+      body {
+        margin: 0;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: "Roboto", sans-serif;
+        font-weight: bold;
+        background-color: #291d89;
+      }
+
+      svg {
+        width: 100%;
+        height: 100vh;
+      }
+
+      .hidden {
+        visibility: hidden;
+      }
+
+      #base {
+        cursor: pointer;
+      }
+    </style>
+
+    <script>
+      if (document.location.search.match(/type=embed/gi)) {
+        window.parent.postMessage("resize", "*");
+      }
+    </script>
+  </head>
+
+  <body translate="no">
+    <svg viewBox="0 0 1400 1080" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path
+        id="paperPlaneRoute"
+        d="M563.558,526.618 C638.854,410.19 787.84,243.065 916.53,334.949 1041.712,424.328 858.791,877.927 743.926,856.655 642.241,838.669 699.637,688.664 700,540"
+        stroke="white"
+        stroke-width="3"
+        style="stroke-dashoffset: 0.001px; stroke-dasharray: 0px, 999999px"
+      />
+      <g id="rectSent" clip-path="url(#clipPath)">
+        <g id="rectSentItems">
+          <rect
+            id="sentBase"
+            x="460"
+            y="468.5"
+            width="480"
+            height="143"
+            rx="23"
+            fill="white"
+          />
+          <text
+            id="txtSent"
+            fill="#4F67ED"
+            xml:space="preserve"
+            style="white-space: pre"
+            font-family="Roboto"
+            font-size="82"
+            font-weight="bold"
+            letter-spacing="0.025em"
+          >
+            <tspan x="637.487" y="568.027">LetsGo!</tspan>
+          </text>
+        </g>
+      </g>
+      <g id="base">
+        <g filter="url(#flShadow)">
+          <rect
+            id="btnBase"
+            x="418.117"
+            y="460.55"
+            width="563.765"
+            height="158.899"
+            rx="27"
+            fill="#F1F3FF"
+          />
+        </g>
+        <text
+          id="txtSend"
+          fill="#291D89"
+          xml:space="preserve"
+          style="white-space: pre"
+          font-family="Roboto"
+          font-size="82"
+          font-weight="bold"
+          letter-spacing="0.06em"
+        >
+          <tspan x="679.379" y="568.027">Start?</tspan>
+        </text>
+        <g
+          id="paperPlane"
+          style="transform-origin: 0px 0px 0px"
+          data-svg-origin="563.55859375 527.734375"
+          transform="matrix(0.8396,0.5432,-0.5432,0.8396,377.09924,-222.6639)"
+        >
+          <path
+            id="paperPlanePath"
+            d="M560.611 481.384C562.003 479.263 565.113 479.263 566.505 481.384L607.063 543.177C615.657 556.272 607.507 573.375 592.766 575.676L566.422 557.462V510.018C566.422 508.436 565.14 507.154 563.558 507.154C561.976 507.154 560.693 508.436 560.693 510.018V557.462L534.349 575.676C519.609 573.375 511.459 556.272 520.053 543.177L560.611 481.384Z"
+            fill="#4F67EB"
+          />
+        </g>
+      </g>
+      <circle
+        id="cBottom"
+        cx="700"
+        cy="540"
+        r="97.516"
+        fill="#C23F3F"
+        class="hidden"
+      />
+      <circle
+        id="cTop"
+        cx="700"
+        cy="502.365"
+        r="107.898"
+        fill="#C23F3F"
+        class="hidden"
+      />
+      <circle
+        id="cCenter"
+        cx="700"
+        cy="540"
+        r="123"
+        fill="#A74C4C"
+        class="hidden"
+      />
+      <circle
+        id="cEnd"
+        cx="495"
+        cy="540"
+        r="98"
+        fill="#F1F3FF"
+        class="hidden"
+      />
+      <path
+        id="tickMark"
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        d="M597.3 489.026C595.179 487.257 592.026 487.541 590.257 489.662L550.954 536.768L534.647 522.965C532.539 521.181 529.384 521.444 527.6 523.551L519.096 533.598C517.312 535.706 517.575 538.861 519.682 540.645L538.606 556.662C538.893 557.162 539.272 557.621 539.74 558.012L549.847 566.445C551.967 568.214 555.12 567.929 556.889 565.809L608.042 504.501C609.811 502.38 609.527 499.227 607.406 497.458L597.3 489.026Z"
+        fill="#4E67E8"
+        class="hidden"
+      />
+      <defs>
+        <clipPath id="clipPath">
+          <rect
+            id="mask1"
+            x="700"
+            y="450"
+            width="520"
+            height="180"
+            fill="white"
+            id="clipRect"
+          />
+        </clipPath>
+        <filter
+          id="flShadow"
+          x="0"
+          y="0"
+          width="1000"
+          height="1000"
+          filterUnits="userSpaceOnUse"
+          color-interpolation-filters="sRGB"
+        >
+          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feColorMatrix
+            in="SourceAlpha"
+            type="matrix"
+            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+          />
+          <feOffset dx="4" dy="4" />
+          <feGaussianBlur stdDeviation="3.5" />
+          <feColorMatrix
+            type="matrix"
+            values="0 0 0 0 0.5125 0 0 0 0 0.420677 0 0 0 0 0.420677 0 0 0 0.25 0"
+          />
+          <feBlend
+            mode="normal"
+            in2="BackgroundImageFix"
+            result="effect1_dropShadow"
+          />
+          <feBlend
+            mode="normal"
+            in="SourceGraphic"
+            in2="effect1_dropShadow"
+            result="shape"
+          />
+        </filter>
+      </defs>
+    </svg>
+
+    <script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
+    <script src="JavaScript/morphSVG.js"></script>
+    <script src="https://unpkg.com/gsap@3/dist/MotionPathPlugin.min.js"></script>
+    <script src="JavaScript/drawSVG.js"></script>
+    <script id="rendered-js">
+      gsap.registerPlugin(MotionPathPlugin);
+      MorphSVGPlugin.convertToPath("circle, rect");
+      gsap.set("#paperPlaneRoute", { drawSVG: "0% 0%" });
+      gsap.set("#rectSentItems", { x: "-=240" });
+      const tl = gsap.timeline();
+
+      let ranOnce = false;
+
+      function onBtnUp() {
+        if (ranOnce) {
+          tl.restart();
+          return;
+        }
+        ranOnce = true;
+        tl.to("#base", { duration: 0.2, scale: 1, transformOrigin: "50% 50%" });
+        tl.to(
+          "#btnBase",
+          { duration: 0.77, morphSVG: "#cBottom", ease: "power1.inOut" },
+          "start"
+        );
+
+        tl.to("#btnBase", {
+          duration: 0.23,
+          morphSVG: "#cTop",
+          ease: "power1.inOut",
+        });
+        tl.to("#btnBase", {
+          duration: 0.2,
+          morphSVG: "#cCenter",
+          ease: "power1.inOut",
+        });
+
+        tl.to(
+          "#btnBase",
+          { duration: 0.5, morphSVG: "#cEnd", ease: "power1.inOut" },
+          "revealStart"
+        );
+
+        tl.to("#rectSentItems", { x: "0", duration: 0.5 }, "revealStart");
+        tl.to(
+          "#mask1",
+          { x: "-=260", duration: 0.5, ease: "power1.inOut" },
+          "revealStart"
+        );
+
+        tl.to(
+          "#paperPlane",
+          { x: "-=205", duration: 0.5, ease: "power1.inOut" },
+          "revealStart"
+        );
+
+        tl.to(
+          "#paperPlanePath",
+          { duration: 0.43, morphSVG: "#tickMark" },
+          "start+=0.77"
+        );
+
+        tl.to(
+          "#txtSend",
+          { duration: 0.6, scale: 0, transformOrigin: "50% 50%" },
+          "start"
+        );
+
+        tl.to(
+          "#paperPlaneRoute",
+          { drawSVG: "80% 100%", duration: 0.7, ease: "power1.inOut" },
+          "start+=0.3"
+        );
+
+        tl.to(
+          "#paperPlaneRoute",
+          { drawSVG: "100% 100%", duration: 0.2, ease: "power1.inOut" },
+          "start+=1"
+        );
+
+        tl.to(
+          "#paperPlane",
+          {
+            duration: 1,
+            ease: "power1.inOut",
+            immediateRender: true,
+            motionPath: {
+              path: "#paperPlaneRoute",
+              align: "#paperPlaneRoute",
+              alignOrigin: [0.5, 0.5],
+              autoRotate: 90,
+            },
+          },
+
+          "start"
+        );
+
+        tl.to(
+          "#paperPlanePath",
+          { duration: 0.15, attr: { fill: "#ffffff" } },
+          "start"
+        );
+
+        tl.to(
+          // window.setTimeout(function () {
+          //   // Move to a new location or you can do something else
+          //   window.location.href = "bird-loader.html";
+          // }, 5000),
+          "#paperPlanePath",
+          { duration: 0.15, attr: { fill: "#4E67E8" } },
+          "start+=0.77",
+          window.setTimeout(function () {
+            // Move to a new location or you can do something else
+            window.location.href = "bird-loader.html";
+          }, 3000)
+        );
+      }
+
+      function onBtnDown() {
+        gsap.timeline({ defaults: { clearProps: true } });
+        gsap.to("#base", {
+          duration: 0.1,
+          scale: 0.9,
+          transformOrigin: "50% 50%",
+        });
+      }
+
+      const btn = document.getElementById("base");
+      btn.addEventListener("mousedown", onBtnDown);
+      btn.addEventListener("mouseup", onBtnUp);
+      //# sourceURL=pen.js
+    </script>
+    <script src="null.js"></script>
+    <script src="null.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/kursor@0.0.14/dist/kursor.js"></script>
+    <script>
+      new kursor({
+        type: 1,
+        removeDefaultCursor: true,
+        color: "#fe019a",
+      });
+    </script>
+    <style>
+      /* Prevent text selection of an <body> element in all major browsers */
+      body {
+        -youbkit-touch-callout: none;
+        /* iOS Safari */
+        -youbkit-user-select: none;
+        /* Chrome 6.0+, Safari 3.1+, Edge & Opera 15+ */
+        -moz-user-select: none;
+        /* Firefox */
+        -ms-user-select: none;
+        /* IE 10+ and Edge */
+        user-select: none;
+        /* Non-prefixed version,
+                                currently supported by Chrome and Opera */
+      }
+    </style>
+    <script src="javascript/offline.js"></script>
+    <!-- <script>
+      alert("You are " + (window.navigator.onLine ? "off" : "on") + "line");
+
+      window.addEventListener(
+        "online",
+        () =>
+          alert(
+            "You need an active internet connectin while using this website"
+          ),
+        window.setTimeout(function () {
+          // Move to a new location or you can do something else
+          window.location.href = "noConnection.html";
+        }),
+        1000
+      );
+      window.addEventListener("offline", () => console.log("fine"));
+      document
+        .getElementById("statusCheck")
+        .addEventListener("click", () =>
+          alert("window.navigator.onLine is " + window.navigator.onLine)
+        );
+    </script> -->
+  </body>
+</html>

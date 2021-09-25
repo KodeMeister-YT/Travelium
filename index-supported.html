@@ -1,0 +1,1216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="icon" href="images/logo.png" />
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Travelium</title>
+  <link rel="stylesheet" href="index.css" />
+  
+  <link rel="preload" as="video" type="videp.mp4" href="Videos/FINAL CHECK.mp4" />
+  <link href="JavaScript/jquery.js" rel="preload" as="script">
+  <link rel="prefetch" href="sign-in/sign-in.html">
+  <link rel="prefetch" href="macLog.html">
+  <link rel="prefetch" href="2.html">
+  <link rel="stylesheet" href="/FA1--HTML/fade-in.css">
+   <link rel="stylesheet" href="https://unpkg.com/kursor/dist/kursor.css" />
+
+   <style>
+    ::-moz-selection { /* Code for Firefox */
+color: black;
+background: #B3D4FC;
+}
+
+::selection {
+color: black;
+background: #B3D4FC;
+}
+  </style>
+</head>
+
+<style>
+  ::-webkit-scrollbar {
+    width: 25px;
+    margin-right: 5px;
+  }
+
+  ::-webkit-scrollbar-track {
+
+    background-color: #111;
+    box-shadow: inset 0 0 2.5px 2px transparent;
+
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(#e7880c, #fc2828)
+  }
+</style>
+
+<body>
+  <div class="app">
+
+    <script>
+     let name = prompt('What is your name?');
+
+     alert('Dear ' + name + ', Please wait for the website to load completely and then start interacting with it for better user experience');
+      
+      
+    </script>
+  
+ 
+    <script>
+      $(document).ready(function () {
+        // Handler for .ready() called.
+        $('html, body').animate({
+          scrollTop: $('#set-height').offset().top
+        }, 'slow');
+      });
+      ready();
+    </script>
+    <!-- loader -->
+    <div class="loader">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+
+
+
+      <style>
+        .loader {
+          background-color: #fff;
+
+
+        }
+
+        .boxes {
+          --size: 32px;
+          --duration: 800ms;
+          height: calc(var(--size) * 2);
+          width: calc(var(--size) * 3);
+          position: relative;
+          transform-style: preserve-3d;
+          transform-origin: 50% 50%;
+          margin-top: calc(var(--size) * 1.5 * -1);
+          transform: rotateX(60deg) rotateZ(45deg) rotateY(0deg) translateZ(0px);
+        }
+
+        .boxes .box {
+          width: var(--size);
+          height: var(--size);
+          top: 0;
+          left: 0;
+          position: absolute;
+          transform-style: preserve-3d;
+        }
+
+        .boxes .box:nth-child(1) {
+          transform: translate(100%, 0);
+          -webkit-animation: box1 var(--duration) linear infinite;
+          animation: box1 var(--duration) linear infinite;
+        }
+
+        .boxes .box:nth-child(2) {
+          transform: translate(0, 100%);
+          -webkit-animation: box2 var(--duration) linear infinite;
+          animation: box2 var(--duration) linear infinite;
+        }
+
+        .boxes .box:nth-child(3) {
+          transform: translate(100%, 100%);
+          -webkit-animation: box3 var(--duration) linear infinite;
+          animation: box3 var(--duration) linear infinite;
+        }
+
+        .boxes .box:nth-child(4) {
+          transform: translate(200%, 0);
+          -webkit-animation: box4 var(--duration) linear infinite;
+          animation: box4 var(--duration) linear infinite;
+        }
+
+        .boxes .box>div {
+          --background: #5C8DF6;
+          --top: auto;
+          --right: auto;
+          --bottom: auto;
+          --left: auto;
+          --translateZ: calc(var(--size) / 2);
+          --rotateY: 0deg;
+          --rotateX: 0deg;
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          background: var(--background);
+          top: var(--top);
+          right: var(--right);
+          bottom: var(--bottom);
+          left: var(--left);
+          transform: rotateY(var(--rotateY)) rotateX(var(--rotateX)) translateZ(var(--translateZ));
+        }
+
+        .boxes .box>div:nth-child(1) {
+          --top: 0;
+          --left: 0;
+        }
+
+        .boxes .box>div:nth-child(2) {
+          --background: #145af2;
+          --right: 0;
+          --rotateY: 90deg;
+        }
+
+        .boxes .box>div:nth-child(3) {
+          --background: #447cf5;
+          --rotateX: -90deg;
+        }
+
+        .boxes .box>div:nth-child(4) {
+          --background: #DBE3F4;
+          --top: 0;
+          --left: 0;
+          --translateZ: calc(var(--size) * 3 * -1);
+        }
+
+        @-webkit-keyframes box1 {
+
+          0%,
+          50% {
+            transform: translate(100%, 0);
+          }
+
+          100% {
+            transform: translate(200%, 0);
+          }
+        }
+
+        @keyframes box1 {
+
+          0%,
+          50% {
+            transform: translate(100%, 0);
+          }
+
+          100% {
+            transform: translate(200%, 0);
+          }
+        }
+
+        @-webkit-keyframes box2 {
+          0% {
+            transform: translate(0, 100%);
+          }
+
+          50% {
+            transform: translate(0, 0);
+          }
+
+          100% {
+            transform: translate(100%, 0);
+          }
+        }
+
+        @keyframes box2 {
+          0% {
+            transform: translate(0, 100%);
+          }
+
+          50% {
+            transform: translate(0, 0);
+          }
+
+          100% {
+            transform: translate(100%, 0);
+          }
+        }
+
+        @-webkit-keyframes box3 {
+
+          0%,
+          50% {
+            transform: translate(100%, 100%);
+          }
+
+          100% {
+            transform: translate(0, 100%);
+          }
+        }
+
+        @keyframes box3 {
+
+          0%,
+          50% {
+            transform: translate(100%, 100%);
+          }
+
+          100% {
+            transform: translate(0, 100%);
+          }
+        }
+
+        @-webkit-keyframes box4 {
+          0% {
+            transform: translate(200%, 0);
+          }
+
+          50% {
+            transform: translate(200%, 100%);
+          }
+
+          100% {
+            transform: translate(100%, 100%);
+          }
+        }
+
+        @keyframes box4 {
+          0% {
+            transform: translate(200%, 0);
+          }
+
+          50% {
+            transform: translate(200%, 100%);
+          }
+
+          100% {
+            transform: translate(100%, 100%);
+          }
+        }
+
+        html {
+          -webkit-font-smoothing: antialiased;
+        }
+
+        
+      </style>
+
+
+
+
+      <script>
+        if (document.location.search.match(/type=embed/gi)) {
+          window.parent.postMessage("resize", "*");
+        }
+      </script>
+
+
+      </head>
+
+
+      <div class="boxes">
+        <div class="box">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div class="box">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div class="box">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div class="box">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+
+      
+     
+
+
+
+
+
+      <script
+        src="JavaScript/iframeRefreshCSS.js">
+      </script>
+      <script src="javascript/winbox.js"></script>
+      <style>
+        .loader {
+          position: fixed;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          /* z-index:999999999999999999999999999999999999999999999999999999999999999999; */
+        }
+
+        .disappear {
+          display: hidden;
+          background-color: #000;
+          animation: vanish 0s backwards;
+
+        }
+
+        @keyframes vanish {
+          100% {
+            opacity: 0;
+            visibility: hidden;
+            
+
+          }
+        }
+      </style>
+      <script>
+        var loader = document.querySelector(".loader");
+        window.addEventListener("load", vanish);
+
+        function vanish() {
+          loader.classList.add("disappear");
+        }
+      </script>
+    </div>
+    <!-- loader end  -->
+
+
+
+    <div id="set-height"></div>
+    <p id="time"></p>
+    <video id="v0" title="SCROLL DOWN" preload source type="video/mp4; codecs=&quot;vp8, vorbis&quot;" src="Videos/FINAL CHECK.mp4"
+      class="v0"></source>
+
+    </video>
+
+    <!-- Boxicons CDN Link -->
+    <link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <div class="sidebar">
+      <div class="logo-details">
+        <i class="bx bxl-c-plus-plus icon"></i>
+        <div class="logo_name">Travelium</div>
+        <i class="bx bx-menu" id="btn"></i>
+      </div>
+      <ul class="nav-list">
+        <li>
+          <i class="bx bx-search"></i>
+          <input type="text" placeholder=" Search..." />
+          <span class="tooltip">Search</span>
+        </li>
+        <li>
+          <a id="plane">
+            <i class="bx bx-question-mark"></i>
+            <span class="links_name">About Us</span>
+          </a>
+          <span class="tooltip">About Us</span>
+        </li>
+        <li>
+          <a id="book">
+            <i class="bx bxs-plane-alt"></i>
+            <span class="links_name">Book a trip</span>
+          </a>
+          <span class="tooltip">Book a trip</span>
+        </li>
+
+        <li>
+          <a id="ourapplication">
+            <i class="bx bx-mobile"></i>
+            <span class="links_name">Our Application</span>
+          </a>
+          <span class="tooltip">Our Application</span>
+        </li>
+        <li>
+          <a id="gallery">
+            <i class="bx bx-photo-album"></i>
+            <span class="links_name">Gallery</span>
+          </a>
+          <span class="tooltip">Gallery</span>
+        </li>
+        <li>
+          <a id="shop">
+            <i class="bx bx-shopping-bag"></i>
+            <span class="links_name">Store</span>
+          </a>
+          <span class="tooltip">Store</span>
+        </li>
+
+
+        <li>
+          <a id="stats-winbox">
+            <i class="bx bx-stats"></i>
+            <span class="links_name">Company Statistics</span>
+          </a>
+          <span class="tooltip">Company Statistics</span>
+        </li>
+        
+        
+
+        <div>
+          <a id="logout-a" " href="macLog.html" target="blank">
+            <li class="profile" title="LOGOUT">
+              <div class="profile-details">
+                <div class="name_job">
+                  <div class="name">LOG OUT</div>
+
+                </div>
+              </div>
+              <strong><i class="bx bx-log-out" id="log_out"></i></strong>
+              <span class="tooltip">Logout</span>
+
+            </li>
+          </a>
+        </div>
+      </ul>
+
+      <script>
+        let sidebar = document.querySelector(".sidebar");
+        let closeBtn = document.querySelector("#btn");
+        let searchBtn = document.querySelector(".bx-search");
+
+        closeBtn.addEventListener("click", () => {
+          sidebar.classList.toggle("open");
+          menuBtnChange(); //calling the function(optional)
+        });
+
+        searchBtn.addEventListener("click", () => {
+          // Sidebar open when you click on the search iocn
+          sidebar.classList.toggle("open");
+          menuBtnChange(); //calling the function(optional)
+        });
+
+        // following are the code to change sidebar button(optional)
+        function menuBtnChange() {
+          if (sidebar.classList.contains("open")) {
+            closeBtn.classList.replace("bx-menu", "bx-menu-alt-right"); //replacing the iocns class
+          } else {
+            closeBtn.classList.replace("bx-menu-alt-right", "bx-menu"); //replacing the iocns class
+          }
+        }
+      </script>
+      <br />
+      <br />
+      <br />
+
+      <script src="javascript/index.js"></script>
+
+    </div>
+      
+
+
+
+    <!-- designed by me... enjoy! -->
+    <div class="wrapper">
+      <br />
+      <br />
+      <br />
+      <a class="cta" href="#cards" style="position: sticky;">
+        <span> PLACES WE COVER</span>
+        <span>
+          <svg width="66px" height="43px" viewBox="0 0 66 43" version="1.1" xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink">
+            <g id="arrow" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+              <path class="one"
+                d="M40.1543933,3.89485454 L43.9763149,0.139296592 C44.1708311,-0.0518420739 44.4826329,-0.0518571125 44.6771675,0.139262789 L65.6916134,20.7848311 C66.0855801,21.1718824 66.0911863,21.8050225 65.704135,22.1989893 C65.7000188,22.2031791 65.6958657,22.2073326 65.6916762,22.2114492 L44.677098,42.8607841 C44.4825957,43.0519059 44.1708242,43.0519358 43.9762853,42.8608513 L40.1545186,39.1069479 C39.9575152,38.9134427 39.9546793,38.5968729 40.1481845,38.3998695 C40.1502893,38.3977268 40.1524132,38.395603 40.1545562,38.3934985 L56.9937789,21.8567812 C57.1908028,21.6632968 57.193672,21.3467273 57.0001876,21.1497035 C56.9980647,21.1475418 56.9959223,21.1453995 56.9937605,21.1432767 L40.1545208,4.60825197 C39.9574869,4.41477773 39.9546013,4.09820839 40.1480756,3.90117456 C40.1501626,3.89904911 40.1522686,3.89694235 40.1543933,3.89485454 Z"
+                fill="#FFFFFF"></path>
+              <path class="two"
+                d="M20.1543933,3.89485454 L23.9763149,0.139296592 C24.1708311,-0.0518420739 24.4826329,-0.0518571125 24.6771675,0.139262789 L45.6916134,20.7848311 C46.0855801,21.1718824 46.0911863,21.8050225 45.704135,22.1989893 C45.7000188,22.2031791 45.6958657,22.2073326 45.6916762,22.2114492 L24.677098,42.8607841 C24.4825957,43.0519059 24.1708242,43.0519358 23.9762853,42.8608513 L20.1545186,39.1069479 C19.9575152,38.9134427 19.9546793,38.5968729 20.1481845,38.3998695 C20.1502893,38.3977268 20.1524132,38.395603 20.1545562,38.3934985 L36.9937789,21.8567812 C37.1908028,21.6632968 37.193672,21.3467273 37.0001876,21.1497035 C36.9980647,21.1475418 36.9959223,21.1453995 36.9937605,21.1432767 L20.1545208,4.60825197 C19.9574869,4.41477773 19.9546013,4.09820839 20.1480756,3.90117456 C20.1501626,3.89904911 20.1522686,3.89694235 20.1543933,3.89485454 Z"
+                fill="#FFFFFF"></path>
+              <path class="three"
+                d="M0.154393339,3.89485454 L3.97631488,0.139296592 C4.17083111,-0.0518420739 4.48263286,-0.0518571125 4.67716753,0.139262789 L25.6916134,20.7848311 C26.0855801,21.1718824 26.0911863,21.8050225 25.704135,22.1989893 C25.7000188,22.2031791 25.6958657,22.2073326 25.6916762,22.2114492 L4.67709797,42.8607841 C4.48259567,43.0519059 4.17082418,43.0519358 3.97628526,42.8608513 L0.154518591,39.1069479 C-0.0424848215,38.9134427 -0.0453206733,38.5968729 0.148184538,38.3998695 C0.150289256,38.3977268 0.152413239,38.395603 0.154556228,38.3934985 L16.9937789,21.8567812 C17.1908028,21.6632968 17.193672,21.3467273 17.0001876,21.1497035 C16.9980647,21.1475418 16.9959223,21.1453995 16.9937605,21.1432767 L0.15452076,4.60825197 C-0.0425130651,4.41477773 -0.0453986756,4.09820839 0.148075568,3.90117456 C0.150162624,3.89904911 0.152268631,3.89694235 0.154393339,3.89485454 Z"
+                fill="#FFFFFF"></path>
+            </g>
+          </svg>
+        </span>
+      </a>
+    </div>
+
+    </section>
+    <style>
+      @import url("https://fonts.googleapis.com/css?family=Poppins:900i");
+
+      /* * {
+      box-sizing: border-box;
+    } */
+
+      /* body {
+      height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      } */
+
+      .wrapper {
+        display: flex;
+        justify-content: center;
+        margin-top: -70px;
+      }
+
+      .cta {
+        display: flex;
+        padding: 10px 45px;
+        text-decoration: none;
+        font-family: "Poppins", sans-serif;
+        font-size: 40px;
+        color: white;
+        background: rgb(19, 88, 134);
+        transition: 1s;
+        box-shadow: 6px 6px 0 black;
+        transform: skewX(-15deg);
+        height: 80px;
+      }
+
+      .cta:focus {
+        outline: none;
+      }
+
+      .cta:hover {
+        transition: 0.5s;
+        box-shadow: 10px 10px 0 rgb(44, 202, 30);
+      }
+
+      .cta span:nth-child(2) {
+        transition: 0.5s;
+        margin-right: 0px;
+      }
+
+      .cta:hover span:nth-child(2) {
+        transition: 0.5s;
+        margin-right: 45px;
+      }
+
+      /* span {
+        transform: skewX(15deg);
+      } */
+
+      span:nth-child(2) {
+        /* width: 20px; */
+        margin-left: 30px;
+        position: relative;
+        top: 12%;
+      }
+
+      /**************SVG****************/
+
+      path.one {
+        transition: 0.4s;
+        transform: translateX(-60%);
+      }
+
+      path.two {
+        transition: 0.5s;
+        transform: translateX(-30%);
+      }
+
+      .cta:hover path.three {
+        animation: color_anim 1s infinite 0.2s;
+      }
+
+      .cta:hover path.one {
+        transform: translateX(0%);
+        animation: color_anim 1s infinite 0.6s;
+      }
+
+      .cta:hover path.two {
+        transform: translateX(0%);
+        animation: color_anim 1s infinite 0.4s;
+      }
+
+      /* SVG animations */
+
+      @keyframes color_anim {
+        0% {
+          fill: white;
+        }
+
+        50% {
+          fill: rgb(44, 202, 30)
+        }
+
+        100% {
+          fill: white;
+        }
+      }
+    </style>
+
+
+
+
+
+    <!-- CARDS -->
+
+    <h1 class="title" style="font-size: 50px">Places We Cover...</h1>
+    <sec class="cards" id="cards" style="
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 100px;
+        
+      ">
+      <style>
+        @media only screen and (width: 1920px) {
+          html {
+            zoom: 100% !important;
+            
+          }
+          v0{width:100%;height:100vh}
+        }
+        
+
+        .title {
+          font-family: "Raleway";
+          font-size: 24px;
+          font-weight: 700;
+          color: #e95635;
+          text-align: center;
+        }
+
+        p {
+          line-height: 1.5em;
+        }
+
+        h1+p,
+        p+p {
+          margin-top: 10px;
+        }
+
+        .container {
+          padding: 40px 80px;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+        }
+
+        .card-wrap {
+          margin: 10px;
+          transform: perspective(800px);
+          transform-style: preserve-3d;
+          /* cursor: pointer; */
+        }
+
+        .card-wrap:hover .card-info {
+          transform: translateY(0);
+        }
+
+        .card-wrap:hover .card-info p {
+          opacity: 1;
+        }
+
+        .card-wrap:hover .card-info,
+        .card-wrap:hover .card-info p {
+          transition: 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+
+        .card-wrap:hover .card-info:after {
+          transition: 5s cubic-bezier(0.23, 1, 0.32, 1);
+          opacity: 1;
+          transform: translateY(0);
+        }
+
+        .card-wrap:hover .card-bg {
+          transition: 0.6s cubic-bezier(0.23, 1, 0.32, 1),
+            opacity 5s cubic-bezier(0.23, 1, 0.32, 1);
+          opacity: 0.8;
+        }
+
+        .card-wrap:hover .card {
+          transition: 0.6s cubic-bezier(0.23, 1, 0.32, 1),
+            box-shadow 2s cubic-bezier(0.23, 1, 0.32, 1);
+          box-shadow: rgba(255, 255, 255, 0.2) 0 0 40px 5px, white 0 0 0 1px,
+            rgba(0, 0, 0, 0.66) 0 30px 60px 0, inset #333 0 0 0 5px,
+            inset white 0 0 0 6px;
+        }
+
+        .card {
+          position: relative;
+          flex: 0 0 240px;
+          width: 240px;
+          height: 320px;
+          background-color: #333;
+          overflow: hidden;
+          border-radius: 10px;
+          box-shadow: rgba(0, 0, 0, 0.66) 0 30px 60px 0, inset #333 0 0 0 5px,
+            inset rgba(255, 255, 255, 0.5) 0 0 0 6px;
+          transition: 1s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+        }
+
+        .card-bg {
+          opacity: 0.5;
+          position: absolute;
+          top: -20px;
+          left: -20px;
+          width: 150%;
+          height: 150%;
+          padding: 20px;
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: cover;
+          transition: 1s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+            opacity 5s 1s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+          pointer-events: none;
+        }
+
+        .card-info {
+          padding: 20px;
+          position: absolute;
+          bottom: 0;
+          color: #fff;
+          transform: translateY(40%);
+          transition: 0.6s 1.6s cubic-bezier(0.215, 0.61, 0.355, 1);
+        }
+
+        .card-info p {
+          opacity: 0;
+          text-shadow: black 0 2px 3px;
+          transition: 0.6s 1.6s cubic-bezier(0.215, 0.61, 0.355, 1);
+        }
+
+        .card-info * {
+          position: relative;
+          z-index: 1;
+        }
+
+        .card-info:after {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: 0;
+          width: 100%;
+          height: 100%;
+          background-image: linear-gradient(to bottom,
+              transparent 0%,
+              rgba(0, 0, 0, 0.6) 100%);
+          background-blend-mode: overlay;
+          opacity: 0;
+          transform: translateY(100%);
+          transition: 5s 1s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+        }
+
+        .card-info h1 {
+          font-family: "Playfair Display";
+          font-size: 36px;
+          font-weight: 700;
+          text-shadow: rgba(0, 0, 0, 0.5) 0 10px 10px;
+        }
+      </style>
+      <script>
+        if (document.location.search.match(/type=embed/gi)) {
+          window.parent.postMessage("resize", "*");
+        }
+      </script>
+      <script>
+        jQuery(function () {
+          jQuery(window).scrollTop(jQuery('#set-height').offset().top);
+        });
+      </script>
+      <div id="app" class="container">
+        <card
+          data-image="https://images.unsplash.com/photo-1479660656269-197ebb83b540?dpr=2&auto=compress,format&fit=crop&w=1199&h=798&q=80&cs=tinysrgb&crop=">
+          <h1 slot="header">Canyons</h1>
+          <p slot="content">
+            Enjoy an imaginable experience the narrow vallets surrounded by
+            steep, huge mountains!
+          </p>
+        </card>
+        <card
+          data-image="https://images.unsplash.com/photo-1479659929431-4342107adfc1?dpr=2&auto=compress,format&fit=crop&w=1199&h=799&q=80&cs=tinysrgb&crop=">
+          <h1 slot="header">Beaches</h1>
+          <p slot="content">
+            Let us take you to some of the never before seen beaches...
+          </p>
+        </card>
+        <card
+          data-image="https://images.unsplash.com/photo-1479644025832-60dabb8be2a1?dpr=2&auto=compress,format&fit=crop&w=1199&h=799&q=80&cs=tinysrgb&crop=">
+          <h1 slot="header">Exclusive Gardens</h1>
+          <p slot="content">
+            Experience for the first time, never before seen trees in our 200+
+            private gardens...
+          </p>
+        </card>
+        <card
+          data-image="https://images.unsplash.com/photo-1479621051492-5a6f9bd9e51a?dpr=2&auto=compress,format&fit=crop&w=1199&h=811&q=80&cs=tinysrgb&crop=">
+          <h1 slot="header">Lakes</h1>
+          <p slot="content">
+            Feel the limited time presense of migratory birds that come here
+            from all around the world.
+          </p>
+        </card>
+        <card
+          data-image="https://images.unsplash.com/photo-1577702066866-6c8897d06443?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fGlzbGFuZHxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60">
+          <h1 slot="header">Islands</h1>
+          <p slot="content">
+            Feels what it feels like to be enjoying a picnic on our 400+ private
+            islands filled with advetures
+          </p>
+        </card>
+        <card
+          data-image="https://images.unsplash.com/photo-1516443908743-4e6597970510?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzB8fGRlc2VydHN8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60">
+          <h1 slot="header">Deserts</h1>
+          <p slot="content">Feel the heat in the deserts...</p>
+        </card>
+        <card
+          data-image="https://images.unsplash.com/photo-1531698451051-18c97580aeb2?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8d2F0ZXJmYWxsc3xlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60">
+          <h1 slot="header">Waterfalls</h1>
+          <p slot="content">
+            Experience the thrilling scenes of Waterfalls, never seen before...
+          </p>
+        </card>
+        <card
+          data-image="https://images.unsplash.com/photo-1565073182887-6bcefbe225b1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8NXx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60">
+          <h1 slot="header">Mountains</h1>
+          <p slot="content">
+            Come with us, to hike the chilly mountains of himalayas
+          </p>
+        </card>
+</div>
+</sec>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+
+        <!-- designed by me... enjoy! -->
+        <div class="wrapper">
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <a class="cta" onclick="alertGuide()" style="position: sticky;">
+            <span> What to do next??</span>
+            <script>
+              function alertGuide() {
+                alert('💡 For more, explore the navigation bar on the left side of the screen...');
+              }
+            </script>
+          </a>
+        </div>
+      </div>
+    </div>
+      <script
+        src="JavaScript/iframeRefreshCSS.js">
+      </script>
+
+
+
+
+
+
+
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.1/vue.min.js"></script>
+      <script id="rendered-js">
+        Vue.config.devtools = true;
+
+        Vue.component("card", {
+          template: `
+    <div class="card-wrap"
+      @mousemove="handleMouseMove"
+      @mouseenter="handleMouseEnter"
+      @mouseleave="handleMouseLeave"
+      ref="card">
+      <div class="card"
+        :style="cardStyle">
+        <div class="card-bg" :style="[cardBgTransform, cardBgImage]"></div>
+        <div class="card-info">
+          <slot name="header"></slot>
+          <slot name="content"></slot>
+        </div>
+      </div>
+    </div>`,
+          mounted() {
+            this.width = this.$refs.card.offsetWidth;
+            this.height = this.$refs.card.offsetHeight;
+          },
+          props: ["dataImage"],
+          data: () => ({
+            width: 0,
+            height: 0,
+            mouseX: 0,
+            mouseY: 0,
+            mouseLeaveDelay: null,
+          }),
+
+          computed: {
+            mousePX() {
+              return this.mouseX / this.width;
+            },
+            mousePY() {
+              return this.mouseY / this.height;
+            },
+            cardStyle() {
+              const rX = this.mousePX * 30;
+              const rY = this.mousePY * -30;
+              return {
+                transform: `rotateY(${rX}deg) rotateX(${rY}deg)`,
+              };
+            },
+            cardBgTransform() {
+              const tX = this.mousePX * -40;
+              const tY = this.mousePY * -40;
+              return {
+                transform: `translateX(${tX}px) translateY(${tY}px)`,
+              };
+            },
+            cardBgImage() {
+              return {
+                backgroundImage: `url(${this.dataImage})`,
+              };
+            },
+          },
+
+          methods: {
+            handleMouseMove(e) {
+              this.mouseX =
+                e.pageX - this.$refs.card.offsetLeft - this.width / 2;
+              this.mouseY =
+                e.pageY - this.$refs.card.offsetTop - this.height / 2;
+            },
+            handleMouseEnter() {
+              clearTimeout(this.mouseLeaveDelay);
+            },
+            handleMouseLeave() {
+              this.mouseLeaveDelay = setTimeout(() => {
+                this.mouseX = 0;
+                this.mouseY = 0;
+              }, 1000);
+            },
+          },
+        });
+
+        const app = new Vue({
+          el: "#app",
+        });
+        //# sourceURL=pen.js
+      </script>
+
+      <script
+        src="JavaScript/iframeRefreshCSS.js">
+      </script>
+    </section>
+    <br />
+    <br />
+
+
+
+    <style>
+      html {
+        scroll-behavior: smooth !important;
+      }
+    </style>
+
+
+
+
+
+
+
+
+    <iframe src="404.html" scrolling="no" style="border:none;" title="description" id="ourapplicationContent"
+      width="866px" height="567px"></iframe>
+
+
+    
+
+
+    <iframe src="2.html" scrolling="no" style="border:none;" title="description" id="galleryContent" width="866px"
+      height="567px"></iframe>
+    
+
+    <iframe src="about us/MGCLHZRD/fullpage/about.html" style="border:none;" title="description" id="planeContent"
+      width="866px" height="567px"></iframe>
+
+
+    <iframe src="shop/shop.html" style="border:none;" title="description" id="shopContent" width="866px"
+      height="567px"></iframe>
+
+
+    <iframe src="Book A Trip/index.html"  style="border:none;" title="description" id="bookContent"
+      width="866px" height="567px"></iframe>
+
+
+    <iframe src="calendar-stats/index.html" scrolling="no" style="border:none;" title="description" id="statsContent"
+      width="866px" height="567px"></iframe>
+
+
+
+
+
+    <!-- <div id="forWinBox"> -->
+
+    <script>
+      const stats = document.querySelector('#stats-winbox');
+      const statsContent = document.querySelector('#statsContent');
+      const shop = document.querySelector('#shop');
+      const shopContent = document.querySelector('#shopContent');
+      const plane = document.querySelector('#plane');
+      const planeContent = document.querySelector('#planeContent');
+      const book = document.querySelector('#book');
+      const bookContent = document.querySelector('#bookContent');
+      const ourapplication = document.querySelector('#ourapplication');
+      const ourapplicationContent = document.querySelector('#ourapplicationContent');
+      const gallery = document.querySelector('#gallery');
+      const galleryContent = document.querySelector('#galleryContent');
+      
+
+
+      ourapplication.addEventListener('click', () => {
+        const ourapplicationBox = new WinBox({
+          title: 'Our Application .exe',
+
+          width: '806px',
+          height: '537px',
+          left: 218,
+          top: 101,
+          mount: ourapplicationContent,
+          onfocus: function () {
+            this.setBackground('linear-gradient(90deg, #1488CC,#2B32B2)')
+          },
+          onblur: function () {
+            this.setBackground('#777')
+          },
+        })
+      })
+      gallery.addEventListener('click', () => {
+        const galleryBox = new WinBox({
+          title: 'gallery .exe',
+
+          width: '806px',
+          height: '537px',
+          left: 288,
+          top: 52,
+          mount: galleryContent,
+          onfocus: function () {
+            this.setBackground('linear-gradient(90deg, #1488CC,#2B32B2)')
+          },
+          onblur: function () {
+            this.setBackground('#777')
+          },
+        })
+      })
+      plane.addEventListener('click', () => {
+        const planeBox = new WinBox({
+          title: 'About Us .exe',
+
+          width: '806px',
+          height: '537px',
+          left: 88,
+          top: 20,
+          mount: planeContent,
+          onfocus: function () {
+            this.setBackground('linear-gradient(90deg, #1488CC,#2B32B2)')
+          },
+          onblur: function () {
+            this.setBackground('#777')
+          },
+        })
+      })
+     
+      shop.addEventListener('click', () => {
+        const shopBox = new WinBox({
+          title: 'Travelium Store .exe',
+
+          width: '806px',
+          height: '537px',
+          left: 358,
+          top: 12,
+          mount: shopContent,
+          onfocus: function () {
+            this.setBackground('linear-gradient(90deg, #1488CC,#2B32B2)')
+          },
+          onblur: function () {
+            this.setBackground('#777')
+          },
+        })
+      })
+      book.addEventListener('click', () => {
+        const bookBox = new WinBox({
+          title: 'Book a trip .exe',
+          // modal: true,
+          width: '1106px',
+          height: '600px',
+          left: 148,
+          top: 60,
+          mount: bookContent,
+          onfocus: function () {
+            this.setBackground('linear-gradient(90deg, #1488CC,#2B32B2)')
+          },
+          onblur: function () {
+            this.setBackground('#777')
+          },
+        })
+      })
+      stats.addEventListener('click', () => {
+        const statsBox = new WinBox({
+          title: 'Company Statistics .exe',
+
+          width: '806px',
+          height: '537px',
+          left: 428,
+          top: 62,
+          mount: statsContent,
+          onfocus: function () {
+            this.setBackground('linear-gradient(90deg, #1488CC,#2B32B2)')
+          },
+          onblur: function () {
+            this.setBackground('#777')
+          },
+        })
+      })
+    </script>
+    <style>
+      .wb-body {
+        background: rgb(250, 234, 222);
+        overflow-y: hidden;
+        /* Hide vertical scrollbar */
+        overflow-x: hidden;
+        /* Hide horizontal scrollbar */
+        border-radius: 0 0 6px 6px;
+        margin: 5px;
+
+      }
+
+      .winbox {
+        border-radius: 6px;
+        background: linear-gradient(90deg, #0050ff, #ff00ff);
+      }
+    </style>
+
+
+    <script src="null.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/kursor@0.0.14/dist/kursor.js"></script>
+    <script>
+      new kursor({
+        type: 1,
+        removeDefaultCursor: true,
+color: '#fe019a',
+
+      });
+    </script>
+   <script src="javascript/offline.js"></script>
+  </div>
+
+</body>
+
+
+</html>

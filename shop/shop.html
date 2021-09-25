@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="icon" href="logo.png" />
+    <meta charset="UTF-8" />
+
+    <title>Trevellium Store</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://unpkg.com/kursor/dist/kursor.css" />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Overpass:100,300,700"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:400,100,700,900,300"
+      rel="stylesheet"
+      type="text/css"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Oswald:300,400,700"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.rawgit.com/dimsemenov/Magnific-Popup/master/dist/magnific-popup.css"
+    />
+
+    <style>
+      ::-webkit-scrollbar {
+        width: 25px;
+        margin-right: 5px;
+      }
+
+      ::-webkit-scrollbar-track {
+        background-color: rgb(146, 146, 146);
+        box-shadow: inset 0 0 2.5px 2px transparent;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background: linear-gradient(#e7880c, #fc2828);
+      }
+      html {
+        overflow-x: hidden;
+      }
+
+      body,
+      html {
+        height: 100vh;
+        width: 100vw;
+        background: #eee;
+        margin: 0;
+      }
+
+      #sushi-header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        height: 150px;
+        width: 100vw;
+        margin: 0;
+        position: relative;
+        top: 0;
+        text-align: center;
+        background: url("../images/store-bg.jpeg");
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+      #sushi-header:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.6);
+      }
+
+      #sushi-header h1 {
+        position: relative;
+        font: 400 48px "Oswald";
+        text-transform: uppercase;
+        color: #fff;
+      }
+
+      .cart {
+        position: fixed;
+        bottom: 0;
+        bottom: -375px;
+        margin: 0 auto;
+        left: 50%;
+        /* bring your own prefixes */
+        transform: translate(-50%, 0);
+        z-index: 4;
+        /*padding: 5px 70px;*/
+        width: 80vw;
+        max-width: 800px;
+        height: 500px;
+        border-radius: 10px;
+        border: 3px solid #000;
+        background-color: #fff;
+        color: #000;
+        transition: all 300ms ease-in-out;
+      }
+
+      .cart h2 {
+        margin: 5px 0 0 0;
+        font: 700 16px "Oswald";
+        text-transform: uppercase;
+        text-align: center;
+      }
+
+      #cart-total {
+        position: relative;
+        text-align: center;
+        padding: 5px 0;
+        font: 400 16px "Open Sans";
+      }
+
+      .hide-cart {
+        bottom: -600px;
+      }
+
+      .expand-cart {
+        bottom: -10px;
+      }
+
+      .cart-items {
+        list-style-type: none;
+        padding: 10px 0;
+      }
+
+      .cart-items li {
+        text-align: center;
+        padding: 10px 0;
+      }
+
+      #gallery {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 30px 2px;
+        grid-auto-rows: auto;
+        max-width: 880px;
+        text-align: center;
+        margin: 30px auto;
+        padding: 0;
+        padding-bottom: 200px;
+      }
+
+      .card {
+        height: 350px;
+        width: 250px;
+        margin: 0 auto;
+        transform-style: preserve-3d;
+        perspective: 30em;
+      }
+
+      .inner-div {
+        position: relative;
+        height: 100%;
+        width: 100%;
+        perspective-origin: center;
+        transition: all 300ms ease-in-out;
+        transform-style: preserve-3d;
+      }
+
+      .front,
+      .back {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        border-radius: 5px;
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.25);
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+      }
+
+      .front h1,
+      .card h1 {
+        font: 700 16px "Oswald";
+        text-transform: uppercase;
+        margin: 0;
+      }
+
+      .front {
+        background: #fff;
+      }
+
+      .back {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: #222;
+        transform: rotateY(180deg);
+        color: #fff;
+      }
+
+      /*.card:hover .inner-div {
+  transform: rotateY(180deg);
+
+}*/
+      /*  Button Styles  */
+      .btn {
+        background: tomato;
+        padding: 10px 25px;
+        color: #fff;
+        font: 400 12px "Oswald", sans-serif;
+        text-transform: uppercase;
+        border-radius: 50px;
+        cursor: pointer;
+        perspective-origin: center;
+      }
+
+      .undo-btn {
+        margin-top: 15px;
+      }
+
+      .checkout-btn,
+      .back-to-menu-btn {
+        margin: 5px auto 10px auto;
+        background-color: #ddd;
+        color: #222;
+        font-weight: 700;
+        max-width: 100px;
+        text-align: center;
+      }
+
+      .back-to-menu-btn {
+        margin-top: 10px;
+        background: #222;
+        color: #fff;
+      }
+
+      img {
+        width: 100px;
+        height: 100px;
+        margin: 10px 0;
+      }
+
+      .card-description {
+        width: 130px;
+        font: 300 15px "Open Sans";
+        line-height: 18px;
+        font-weight: 300;
+        text-align: left;
+      }
+
+      .card.active .inner-div {
+        transform: rotateY(180deg);
+      }
+
+      .active {
+        transform: rotateY(180deg);
+      }
+
+      @media (max-width: 870px) {
+        #gallery {
+          grid-template-columns: repeat(2, 1fr);
+          max-width: 540px;
+        }
+
+        .card {
+          max-width: 300px;
+          margin: 0 auto;
+        }
+      }
+      @media (max-width: 540px) {
+        #gallery {
+          grid-template-columns: repeat(1, 1fr);
+          display: block;
+          max-width: 300px;
+        }
+
+        .card {
+          width: 400px;
+          margin: 20px auto;
+        }
+      }
+    </style>
+
+    <script>
+      window.console = window.console || function (t) {};
+    </script>
+
+    <script>
+      if (document.location.search.match(/type=embed/gi)) {
+        window.parent.postMessage("resize", "*");
+      }
+    </script>
+  </head>
+
+  <body translate="no">
+    <section id="sushi-header">
+      <h1>Travelium Store</h1>
+    </section>
+
+    <div class="cart">
+      <h2>Cart Total</h2>
+      <div id="cart-total">$0</div>
+      <div class="btn checkout-btn">Checkout</div>
+      <ul class="cart-items"></ul>
+      <div class="btn back-to-menu-btn">Back to Menu</div>
+    </div>
+
+    <div id="gallery">
+      <div class="card">
+        <div class="inner-div">
+          <div class="front">
+            <img src="../images/1.png" />
+            <h1>Arctic Fox</h1>
+            <p class="card-description">
+              Grab this rugged bag made for rough campings
+            </p>
+            <div class="btn order-btn">Add to Cart</div>
+          </div>
+          <div class="back">
+            <h1>Added to cart</h1>
+            <div class="btn undo-btn">Undo</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="inner-div">
+          <div class="front">
+            <img src="../images/2.jpg" />
+            <h1>Butterfly Premium Luggage Bag</h1>
+            <p class="card-description">
+              Has 20+ pockets and a raincover to protect form unpredicted rains
+            </p>
+            <div class="btn order-btn">Add to Cart</div>
+          </div>
+          <div class="back">
+            <h1>Added to cart</h1>
+            <div class="btn undo-btn">Undo</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="inner-div">
+          <div class="front">
+            <img src="../images/3.jpg" />
+            <h1>GoPro Hero 8</h1>
+            <p class="card-description">
+              Capture sweet moments or capture yourself exploring
+            </p>
+            <div class="btn order-btn">Add to Cart</div>
+          </div>
+          <div class="back">
+            <h1>Added to cart</h1>
+            <div class="btn undo-btn">Undo</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="inner-div">
+          <div class="front">
+            <img src="../images/4.jpg" />
+            <h1>Samart Flasks</h1>
+            <p class="card-description">
+              this smart flask can purify any impure water, Handy when going for
+              camping
+            </p>
+            <div class="btn order-btn">Add to Cart</div>
+          </div>
+          <div class="back">
+            <h1>Added to cart</h1>
+            <div class="btn undo-btn">Undo</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="inner-div">
+          <div class="front">
+            <img src="../images/5.jpg" />
+            <h1>Smart Tent with electricity</h1>
+            <p class="card-description">
+              Packed with 10 lithium ion batteries, this tent can suppy
+              electricty for 2 months
+            </p>
+            <div class="btn order-btn">Add to Cart</div>
+          </div>
+          <div class="back">
+            <h1>Added to cart</h1>
+            <div class="btn undo-btn">Undo</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="inner-div">
+          <div class="front">
+            <img src="../images/6.jpg" />
+            <h1>Jolochip</h1>
+            <p class="card-description">
+              Experience the chip made of deadly spices from all over the world
+            </p>
+            <div class="btn order-btn">Add to Cart</div>
+          </div>
+          <div class="back">
+            <h1>Added to cart</h1>
+            <div class="btn undo-btn">Undo</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-1b93190375e9ccc259df3a57c1abc0e64599724ae30d7ea4c6877eb615f89387.js"></script>
+
+    <script id="rendered-js">
+      const cards = document.querySelectorAll(".card");
+      const innerDiv = document.querySelectorAll(".innerDiv");
+      const cart = document.querySelector(".cart");
+      const cartTotal = document.querySelector("#cart-total");
+      const orderBtns = document.querySelectorAll(".order-btn");
+      const undoBtns = document.querySelectorAll(".undo-btn");
+      const checkoutBtn = document.querySelector(".checkout-btn");
+      const backToMenuBtn = document.querySelector(".back-to-menu-btn");
+      const sushiName = document.querySelector(".front h1");
+      const cartItems = document.querySelector(".cart-items");
+
+      // Initial cart total
+      let result = 0;
+
+      orderBtns.forEach(function (orderBtn) {
+        orderBtn.addEventListener("click", function (e) {
+          e.currentTarget.parentNode.parentNode.classList.add("active");
+
+          // Add clicked sushi item name to cart
+          /* let newCartItem = document.createElement('li');
+      newCartItem.textContent = e.currentTarget.previousElementSibling.previousElementSibling.textContent;
+     cartItems.appendChild(newCartItem);*/
+
+          cartTotal.textContent = `$${result + 7}.00`;
+          result = result + 7;
+
+          cart.classList.remove("hide-cart");
+        });
+      });
+
+      undoBtns.forEach(function (undoBtn) {
+        undoBtn.addEventListener("click", function (e) {
+          e.currentTarget.parentNode.parentNode.classList.remove("active");
+
+          /*if(e.currentTarget.previousElementSibling) {
+      cartItems.removeChild();
+      
+      console.log('this worked');
+    }*/
+          /*if(cartItems.hasChildNodes()) {
+      let newCartItem = cartItems.childNode;
+       cartItems.removeChild(newCartItem);
+    };*/
+
+          cartTotal.textContent = `$${result - 7}.00`;
+          result = result - 7;
+
+          if (result === 0) {
+            hideCart();
+          }
+        });
+      });
+
+      // Hide cart if there is nothing in it
+      let hideCart = function () {
+        if (result === 0) {
+          cart.classList.add("hide-cart");
+        }
+      };
+
+      hideCart();
+
+      // Expand cart when checkout btn clicked
+      checkoutBtn.addEventListener("click", function () {
+        cart.classList.add("expand-cart");
+      });
+
+      // Show menu when back to menu btn clicked
+      backToMenuBtn.addEventListener("click", function () {
+        cart.classList.remove("expand-cart");
+      });
+    </script>
+    <script src="null.js"></script>
+    <script src="null.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/kursor@0.0.14/dist/kursor.js"></script>
+    <script>
+      new kursor({
+        type: 1,
+        removeDefaultCursor: true,
+        color: "#fe019a",
+      });
+    </script>
+    <style>
+      ::-moz-selection {
+        /* Code for Firefox */
+        color: black;
+        background: #b3d4fc;
+      }
+
+      ::selection {
+        color: black;
+        background: #b3d4fc;
+      }
+    </style>
+  </body>
+</html>

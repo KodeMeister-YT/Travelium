@@ -1,0 +1,20 @@
+/**
+ * Description: Data structure.
+ * Version: 1.0.0
+ */
+
+@import 'bourbon';
+
+@import 'base/_reset';
+
+@import 'utils/variables',
+'utils/functions',
+'utils/mixins',
+'base/typography',
+'utils/placeholders';
+
+@import 'layout/loader';
+
+@import 'base/base';
+
+@import 'pages/home';

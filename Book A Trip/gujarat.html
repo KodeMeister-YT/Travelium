@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="../images/logo.png" />
+
+    <title>Tour Gujarat</title>
+    <link rel="stylesheet" href="guide.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Open+Sans"
+    />
+    <link rel="stylesheet" href="fade-in.css" />
+    <link rel="stylesheet" href="https://unpkg.com/kursor/dist/kursor.css" />
+    <style>
+      ::-moz-selection {
+        /* Code for Firefox */
+        color: black;
+        background: #b3d4fc;
+      }
+
+      ::selection {
+        color: black;
+        background: #b3d4fc;
+      }
+    </style>
+    <style>
+      *,
+      *:before,
+      *:after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        background: #15181a;
+        font-family: "Open Sans", Helvetica, Arial, sans-serif;
+      }
+
+      .skw-pages {
+        overflow: hidden;
+        position: relative;
+        height: 100vh;
+      }
+
+      .skw-page {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+      }
+      .skw-page__half {
+        position: absolute;
+        top: 0;
+        width: 50%;
+        height: 100vh;
+        transition: transform 1s;
+      }
+      .skw-page__half--left {
+        left: 0;
+        transform: translate3d(-32.4vh, 100%, 0);
+      }
+      .skw-page__half--right {
+        left: 50%;
+        bottom: 10%;
+        transform: translate3d(32.4vh, -100%, 0);
+      }
+      .skw-page.active .skw-page__half {
+        transform: translate3d(0, 0, 0);
+      }
+      .skw-page__skewed {
+        overflow: hidden;
+        position: absolute;
+        top: 0;
+        width: 140%;
+        height: 100%;
+        transform: skewX(-18deg);
+        background: #000;
+      }
+      .skw-page__half--left .skw-page__skewed {
+        left: -40%;
+      }
+      .skw-page__half--right .skw-page__skewed {
+        right: -40%;
+      }
+      .skw-page__content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-flow: column wrap;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        padding: 0 30%;
+        color: #fff;
+        transform: skewX(18deg);
+        transition: transform 1s, opacity 1s;
+        background-size: cover;
+      }
+      .skw-page__half--left .skw-page__content {
+        padding-left: 30%;
+        padding-right: 30%;
+        transform-origin: 100% 0;
+      }
+      .skw-page__half--right .skw-page__content {
+        padding-left: 30%;
+        padding-right: 30%;
+        transform-origin: 0 100%;
+      }
+      .skw-page.inactive .skw-page__content {
+        opacity: 0.5;
+        transform: skewX(18deg) scale(0.95);
+      }
+      .skw-page__heading {
+        margin-bottom: 15px;
+        text-transform: uppercase;
+        font-size: 25px;
+        text-align: center;
+      }
+      .skw-page__description {
+        font-size: 18px;
+        text-align: center;
+      }
+      .skw-page__link {
+        color: #ffa0a0;
+      }
+      .skw-page-1 .skw-page__half--left .skw-page__content {
+        background-image: url("../images/gj1.jpg");
+      }
+      .skw-page-1 .skw-page__half--right .skw-page__content {
+        background: #292929;
+      }
+      .skw-page-2 .skw-page__half--left .skw-page__content {
+        background: #292929;
+      }
+      .skw-page-2 .skw-page__half--right .skw-page__content {
+        background-image: url("../images/gj2.webp");
+      }
+      .skw-page-3 .skw-page__half--left .skw-page__content {
+        background-image: url("../images/gj3.jpg");
+      }
+      .skw-page-3 .skw-page__half--right .skw-page__content {
+        background: #292929;
+      }
+      .skw-page-4 .skw-page__half--left .skw-page__content {
+        background: #292929;
+      }
+      .skw-page-4 .skw-page__half--right .skw-page__content {
+        background-image: url("../images/gj4.jpg");
+      }
+      .skw-page-5 .skw-page__half--left .skw-page__content {
+        background-image: url("../images/gj5.webp");
+      }
+      .skw-page-5 .skw-page__half--right .skw-page__content {
+        background: #292929;
+      }
+    </style>
+
+    <script>
+      window.console = window.console || function (t) {};
+    </script>
+
+    <script>
+      if (document.location.search.match(/type=embed/gi)) {
+        window.parent.postMessage("resize", "*");
+      }
+    </script>
+  </head>
+
+  <body translate="no">
+    <div class="skw-pages">
+      <div class="skw-page skw-page-1 active">
+        <div class="skw-page__half skw-page__half--left">
+          <div class="skw-page__skewed">
+            <div class="skw-page__content"></div>
+          </div>
+        </div>
+        <div class="skw-page__half skw-page__half--right">
+          <div class="skw-page__skewed">
+            <div class="skw-page__content">
+              <h2 class="skw-page__heading">Gujarat</h2>
+              <p class="skw-page__description">"Vibrant Gujarat"</p>
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <h5>SCROLL DOWN...</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="skw-page skw-page-2">
+        <div class="skw-page__half skw-page__half--left">
+          <div class="skw-page__skewed">
+            <div class="skw-page__content">
+              <h2 class="skw-page__heading">Statue Of Unity</h2>
+              <p class="skw-page__description">World's Tallest Statue</p>
+            </div>
+          </div>
+        </div>
+        <div class="skw-page__half skw-page__half--right">
+          <div class="skw-page__skewed">
+            <div class="skw-page__content"></div>
+          </div>
+        </div>
+      </div>
+      <div class="skw-page skw-page-3">
+        <div class="skw-page__half skw-page__half--left">
+          <div class="skw-page__skewed">
+            <div class="skw-page__content"></div>
+          </div>
+        </div>
+        <div class="skw-page__half skw-page__half--right">
+          <div class="skw-page__skewed">
+            <div class="skw-page__content">
+              <p class="skw-page__description">
+                Exclusive Asiatic Lions Found only at
+              </p>
+              <h2 class="skw-page__heading">Gir Forests</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="skw-page skw-page-4">
+        <div class="skw-page__half skw-page__half--left">
+          <div class="skw-page__skewed">
+            <div class="skw-page__content">
+              <p class="skw-page__description">World Famous</p>
+              <h2 class="skw-page__heading">Rann utsav</h2>
+            </div>
+          </div>
+        </div>
+        <div class="skw-page__half skw-page__half--right">
+          <div class="skw-page__skewed">
+            <div class="skw-page__content"></div>
+          </div>
+        </div>
+      </div>
+      <div class="skw-page skw-page-5">
+        <div class="skw-page__half skw-page__half--left">
+          <div class="skw-page__skewed">
+            <div class="skw-page__content"></div>
+          </div>
+        </div>
+        <div class="skw-page__half skw-page__half--right">
+          <div class="skw-page__skewed">
+            <div class="skw-page__content">
+              <h2 class="skw-page__heading">
+                Book Yourself a trip to gujarat right now
+              </h2>
+
+              <p class="skw-page__description">
+                <a
+                  class="skw-page__link"
+                  href="
+                gujarat-book.html"
+                  >Click to Book</a
+                >
+                <br />
+              </p>
+              or
+              <p class="skw-page__description">
+                <a class="skw-page__link" href="index.html"
+                  >Click to go back to map</a
+                >
+                <br />
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script id="rendered-js">
+      $(document).ready(function () {
+        var curPage = 1;
+        var numOfPages = $(".skw-page").length;
+        var animTime = 1000;
+        var scrolling = false;
+        var pgPrefix = ".skw-page-";
+
+        function pagination() {
+          scrolling = true;
+
+          $(pgPrefix + curPage)
+            .removeClass("inactive")
+            .addClass("active");
+          $(pgPrefix + (curPage - 1)).addClass("inactive");
+          $(pgPrefix + (curPage + 1)).removeClass("active");
+
+          setTimeout(function () {
+            scrolling = false;
+          }, animTime);
+        }
+
+        function navigateUp() {
+          if (curPage === 1) return;
+          curPage--;
+          pagination();
+        }
+
+        function navigateDown() {
+          if (curPage === numOfPages) return;
+          curPage++;
+          pagination();
+        }
+
+        $(document).on("mousewheel DOMMouseScroll", function (e) {
+          if (scrolling) return;
+          if (e.originalEvent.wheelDelta > 0 || e.originalEvent.detail < 0) {
+            navigateUp();
+          } else {
+            navigateDown();
+          }
+        });
+
+        $(document).on("keydown", function (e) {
+          if (scrolling) return;
+          if (e.which === 38) {
+            navigateUp();
+          } else if (e.which === 40) {
+            navigateDown();
+          }
+        });
+      });
+      //# sourceURL=pen.js
+    </script>
+    <script src="null.js"></script>
+    <script src="null.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/kursor@0.0.14/dist/kursor.js"></script>
+    <script>
+      new kursor({
+        type: 1,
+        removeDefaultCursor: true,
+        color: "#fe019a",
+      });
+    </script>
+  </body>
+</html>

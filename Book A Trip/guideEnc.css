@@ -1,0 +1,23 @@
+@font-face {
+  font-family: sf-pdl;
+  src: url(SF-Pro-Display-Light.otf);
+}
+
+@font-face {
+  font-family: ny-elb;
+  src: url(NewYorkExtraLargeBold.otf);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  /* font-family: ny-elb; */
+  font-family: sf-pdl !important;
+}
+
+p {
+  font-family: sf-pdl !important;
+}
